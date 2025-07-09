@@ -3,36 +3,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Book a Session | Royal Productions</title>
-  <script defer src="script.js"></script>
+  <title>Admin | Royal Productions</title>
+  <script>
+    const password = prompt("Enter admin password:");
+    if (password !== "Royal2025") {
+      document.body.innerHTML = "<h1>Access Denied</h1>";
+    }
+  </script>
 </head>
 <body>
-  <h1>Book a Session</h1>
-  <form id="booking-form">
-    <label>Name: <input type="text" name="name" required></label><br>
-    <label>Email: <input type="email" name="email" required></label><br>
-    <label>Phone: <input type="tel" name="phone" required></label><br>
-    <label>Service:
-      <select name="service" required>
-        <option value="video">Video - $500</option>
-        <option value="photo">Photo - $400</option>
-        <option value="design">Design - $300</option>
-      </select>
-    </label><br>
-    <label>Date: <input type="date" name="date" required></label><br>
-    <label>Time: <input type="time" name="time" required></label><br>
-    <label>Payment Method:
-      <select name="payment" required>
-        <option value="stripe">Stripe</option>
-        <option value="cash">Cash</option>
-        <option value="zelle">Zelle</option>
-        <option value="cashapp">Cash App</option>
-        <option value="paypal">PayPal</option>
-        <option value="venmo">Venmo</option>
-      </select>
-    </label><br>
-    <button type="submit">Submit Booking</button>
-  </form>
-  <div id="confirmation" style="display:none;"></div>
+  <h1>Royal Productions Admin Dashboard</h1>
+  <ul>
+    <li><a href="#">View Bookings</a></li>
+    <li><a href="#">Manage Gallery</a></li>
+    <li><a href="#">Manage Shop</a></li>
+    <li><a href="#">View Waivers</a></li>
+  </ul>
 </body>
 </html>
